@@ -1,0 +1,2 @@
+<mov_path> 	/Users/nobuhiro/Documents/source/openframeworks/data/vj material/vj Hap(1280x720)/mov_0
+
