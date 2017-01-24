@@ -89,7 +89,7 @@ void ofApp::ReadConfig()
 	********************/
 	FILE* fp;
 	fp = fopen("../../../data/config.txt", "r");
-	if(fp == NULL) { ERROR_MSG(); ofExit(); }
+	if(fp == NULL) { ERROR_MSG(); std::exit(1); }
 	
 	char buf[BUF_SIZE];
 	while(fscanf(fp, "%s", buf) != EOF){
@@ -124,7 +124,7 @@ void ofApp::makeup_mov_table(const string dirname, vector<TABLE_MOV_INFO>& Table
 	string wPathName;
 
 	pDir = opendir( dirname.c_str() );
-	if ( NULL == pDir ) { ERROR_MSG(); ofExit(1); }
+	if ( NULL == pDir ) { ERROR_MSG(); std::exit(1); }
 
 	pEnt = readdir( pDir );
 	while ( pEnt ) {
